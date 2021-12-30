@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>mobile_veri</title>
+	<style> 
+	input[type=submit]{
+		    font-size: 120%;
+ 			width: 190px;
+ 			height: 40px;
+ 			background-color: rgb(244,244,244);
+ 		}
+		input[type=submit]:hover {
+    background-color: #555;
+		color: white;}
+	input[type=number] {
+    width: 340px;
+    padding: 0 25px;
+    height: 42px;
+    border: 2px solid #f2f2f2;
+    background: #f6f6f6;
+    color: #202124;
+    font-size: 14px;
+    line-height: 42px;
+    border-radius: 25px;
+}
+	</style>	
+</head> 
+<body bgcolor="#9DE6B1" text="black">
+	<form method="POST">
+	<p align="left">
+		<input type="submit" name="settings"   value="return to home page">                                  
+    </p>
+	<h1 align="center"><font size="+6">Change your personal settings</font></h1>
+	<hr>
+		<table align="center">
+		<tr>
+			<td><font size="+2">Phone number :</font></td> 
+			<td><input type="number" name="phonenumber" size="20" maxlength="11" value="{{default[0]}}" min="0" max="20000000000" step="1"></td>
+			
+		</tr>
+		<tr></tr>
+		<tr>
+			<td><font size="+2">Threshold  :</font></td> 
+			<td><input type="number" name="thres" size="5" maxlength="3" value="{{default[1]}}" min="0" max="50"></td>
+		</tr>
+	</table>
+	<p align="center">
+		<input type="submit" name="settings"   value="Confirm">                                  
+    </p>
+	</form>
+</body>
+</html>

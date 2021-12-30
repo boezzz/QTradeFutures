@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>LOG_IN</title>
+<style>
+	input[type=submit]{
+		    font-size: 120%;
+ 			width: 180px;
+ 			height: 40px;
+ 			background-color: rgb(244,244,244);
+ 		}
+	input[type=submit]:hover {
+    background-color: #555;
+		color: white;}
+	input[type=text] {
+    width: 340px;
+    padding: 0 25px;
+    height: 42px;
+    border: 2px solid #f2f2f2;
+    background: #f6f6f6;
+    color: #202124;
+    font-size: 14px;
+    line-height: 42px;
+    border-radius: 25px;
+}
+	input[type=password] {
+    width: 340px;
+    padding: 0 25px;
+    height: 42px;
+    border: 2px solid #f2f2f2;
+    background: #f6f6f6;
+    color: #202124;
+    font-size: 14px;
+    line-height: 42px;
+    border-radius: 25px;
+}
+	</style>	
+</head> 
+<body bgcolor="#9DE6B1" text="black">
+	<h1 align="center"><font size="+6">Welcome to the trade system</font></h1>
+	<h2 align="center">Please log in</h2>
+	<hr>
+	<form method="POST">
+		<table align="center">
+		<tr>
+			<td><font size="+3">Username:</font></td> 
+			<td><input type="text" name="username" size="20" maxlength="20"></td>
+		</tr>
+		<tr></tr>
+		<tr>
+			<td><font size="+3">Password :</font></td> 
+			<td><input type="password" name="password" size="20" maxlength="20"></td>
+		</tr>
+	</table>
+		<p align="center">
+			<font size="+2">{{error}}</font>
+		</p>
+	
+		<p align="center">
+		<input type="submit" name="login"   value="Log in">  
+		</p>
+    <hr>
+	<table>
+		<tr>
+			<td><input type="submit" name="login"   value="Forget password"></td>
+		</tr>                                  
+    
+		<tr>
+			<td><input type="submit" name="login"   value="Create account"></td>
+		</tr>
+	</table>
+	</form>
+   
+	
+</body>
+</html>

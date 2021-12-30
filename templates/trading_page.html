@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>create_account</title>
+   <style>
+	input[type=submit]{
+		    font-size: 120%;
+ 			width: 190px;
+ 			height: 40px;
+ 			background-color: rgb(244,244,244);
+ 		}
+	   input[type=submit]:hover {
+    background-color: #555;
+		color: white;}
+	input[type=number] {
+    width: 340px;
+    padding: 0 25px;
+    height: 42px;
+    border: 2px solid #f2f2f2;
+    background: #f6f6f6;
+    color: #202124;
+    font-size: 14px;
+    line-height: 42px;
+    border-radius: 25px;
+}
+	</style>	
+</head> 
+<body bgcolor="#9DE6B1" text="black">
+	<form method="POST">
+	<p align="left">
+		<input type="submit" name="trade"   value="return to home page">  
+		<input type="submit" name="trade"   value="back to detail">    
+    </p>
+	<h1 align="center"><font size="+6">Trade {{trade[0]}} </font></h1>
+	<h2 align="center"><font size="+3">current price: {{trade[1][0]}}</font></h2>
+<hr>
+	<p align="center">
+		<table align="center">
+		<tr>
+			<td><font size="+2">Selling :</font></td> 
+			<td><input type="number" name="selling" size="20" maxlength="20" value = "0" min="-{{trade[1][5]}}" step="1"></td>
+			<td><font size="+1">{{trade[1][5]}} unit(s) hold</font></td>  
+		</tr>
+		<tr>
+			<td><font size="+2">Buying :</font></td> 
+			<td><input type="number" name="buying" size="20" maxlength="20" value = "0" min="-{{trade[1][6]}}" step="1"></td>
+			<td><font size="+1">{{trade[1][6]}}unit(s) hold</font></td>
+			
+			</tr>
+	</table>
+	<p align="center"><font size="+1">{{statue}}</font></p>
+</p>
+	<p align="center">
+		<input type="submit" name="trade"   value="record transaction">                                  
+    </p>
+	</form>
+	
+</body>
+</html>
