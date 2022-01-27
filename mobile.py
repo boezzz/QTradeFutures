@@ -9,10 +9,10 @@ sql = db.cursor()
 
 def send_mobile(phone_number, text):
     # external api
-    apikey = "a7f38398b04886e1377b44e6be14455d"
+    apikey = "#######"
     params = {"apikey": apikey, "text": text, "mobile": str(phone_number)}
     # send
-    requests.post("https://sms.yunpian.com/v2/sms/single_send.json", params)
+    requests.post("#######", params)
 
 def send_veri(phone_number):
     # generate verification code
@@ -24,7 +24,7 @@ def send_veri(phone_number):
     sql.connection.commit()
 
     # format
-    text = "【天昇环保】您的验证码是%s. Your verification code is %s." % (code, code)
+    text = "#####您的验证码是%s. Your verification code is %s." % (code, code)
     send_mobile(phone_number, text)
 
 def check_mobile(phone_number, code):
@@ -62,7 +62,7 @@ def send_report(userid, rev, val):
     name = getall[0]
     phone_number = getall[1]
 
-    text = "【天昇环保】用户%s，您的累计增加值为%s，累计持有额金为%s。User %s,Your revenue is %s,total value hold is %s." % (name, rev, val, name, rev, val)
+    text = "#####用户%s，您的累计增加值为%s，累计持有额金为%s。User %s,Your revenue is %s,total value hold is %s." % (name, rev, val, name, rev, val)
 
     send_mobile(phone_number, text)
 
@@ -74,6 +74,6 @@ def send_warning(userid, future_code):
     sql.execute("select Phonenumber from user where Usercode=%s" % userid)
     phone_number = sql.fetchone()[0]
 
-    text = "【天昇环保】%s价格波动异常,请检查。We detected a fluctuation in prices of %s,please check." % (name, name)
+    text = "#####%s价格波动异常,请检查。We detected a fluctuation in prices of %s,please check." % (name, name)
            
     send_mobile(phone_number, text)
