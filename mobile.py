@@ -4,7 +4,7 @@ import random
 import requests
 
 
-db = MySQLdb.connect(host='localhost', port=3306, user='root', passwd='619000ab', db='futures', charset='utf8')
+db = MySQLdb.connect(host='localhost', port=####, user='root', passwd='#######3', db='futures', charset='utf8')
 sql = db.cursor()
 
 def send_mobile(phone_number, text):
